@@ -24,12 +24,9 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-20 bg-[#121212]/90">
+    <nav className="fixed border-b border-gray-800 mx-auto top-0 left-0 right-0 z-20 bg-[#181818]/90">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-8 py-8">
-        <Link
-          href={"/"}
-          className="text-2xl md:text-5xl font-semibold text-white"
-        >
+        <Link href={"/"} className="text-2xl md:text-5xl font-semibold">
           {/* If screen is large, show large logo; if small, show small logo */}
           {/* <div className="hidden sm:block">
             <Image src="/logo_large.png" alt="Logo" width={30} height={30} />
@@ -45,14 +42,14 @@ const Navbar = () => {
           {navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+              className="flex items-center px-3 py-2 border rounded border-[#545252] text-text-middle hover:text-white hover:border-white"
             >
               <XMarkIcon className="h-5 w-5" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+              className="flex items-center px-3 py-2 border rounded border-[#545252] text-text-middle hover:text-white hover:border-white"
             >
               <Bars3Icon className="h-5 w-5" />
             </button>

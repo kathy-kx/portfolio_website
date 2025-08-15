@@ -15,7 +15,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-9 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold">
+          <h1 className="text-text-extralight mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500">
               Hello, I'm{" "}
             </span>
@@ -35,18 +35,19 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-lg lg:text-xl mb-6">
-            I'm a software engineer with a passion for building web
-            applications.
+          <p className="text-text-middle text-lg lg:text-xl mb-6">
+            I turn constraints into elegant, working solutions.
+            <br/>
+
           </p>
           <div>
             <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white">
               {/* bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-black可改为bg-white hover:bg-slate-200 text-black*/}
               Hire Me
             </button>
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3">
+            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-text-extralight mt-3">
               {/* bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500可以替换为bg-transparent */}
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+              <span className="block bg-black hover:bg-slate-800 rounded-full px-5 py-2">
                 Download CV
               </span>
             </button>
@@ -56,7 +57,9 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }} className="col-span-3 place-self-center mt-4 lg:mt-0">
+          transition={{ duration: 0.5 }}
+          className="col-span-3 place-self-center mt-4 lg:mt-0"
+        >
           <div className="rounded-full bg-gradient-to-b from-blue-400 via-secondary-400 to-black w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
               src="/images/hero-image.png"

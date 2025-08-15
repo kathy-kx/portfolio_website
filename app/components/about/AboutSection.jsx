@@ -60,7 +60,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white ">
+    <section className="text-text-middle">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image
           src="/images/about-image.png"
@@ -69,24 +69,44 @@ const AboutSection = () => {
           alt="About Image"
         />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
-            Hi, I'm Kathy Kexin Zhu — a Fullstack Developer who loves turning
-            ideas into fast, functional, and delightful products. I'm graduating
-            in April 2026 with a Master's in Electrical & Computer Engineering
-            (GPA 3.95/4.0) from the University of Ottawa, and I'm currently
-            seeking full-time opportunities as well as internships before
-            graduation. I thrive on solving problems end to end — whether it's
-            building scalable REST APIs, optimizing frontend performance, or
-            integrating AI-powered features. I'm comfortable across the stack,
-            from Java, Spring Boot, and Redis to Next.js, React, and Tailwind
-            CSS. Beyond the code, I love collaborating with teams, documenting
-            processes for smoother onboarding, and keeping quality high without
-            slowing down delivery. I take pride in being highly responsible, and
-            coding genuinely makes me happy — there's nothing more satisfying
-            than seeing a solution come to life and knowing it works
-            beautifully.
-          </p>
+          <h2 className="text-4xl font-bold text-text-middle mb-4">About Me</h2>
+          <div className="text-base lg:text-lg">
+            <p className="mb-4">
+              Hi, I'm Kathy Kexin Zhu, a software engineer and full-stack
+              developer.
+            </p>
+            <p className="mb-4">
+              I'm graduating in April 2026 with a Master's in Electrical &
+              Computer Engineering (GPA 3.95/4.0) from the University of Ottawa.
+              and I'm open to full-time opportunities as well
+              as part-time internships.
+            </p>
+            <p className="mb-4">
+              I build end-to-end products that are fast and reliable: 
+              shaping REST APIs and data flows, integrating AI-powered features, 
+              and polishing frontend performance so experiences are fast and reliable. 
+              My core stack includes Java, Spring Boot, Redis, MongoDB, MySQL, Next.js, React, and Tailwind CSS.
+            </p>
+            {/* <p className="mb-4">
+              I thrive on solving problems end to end, whether it's building
+              scalable REST APIs, optimizing frontend performance, or
+              integrating AI-powered features.
+            </p> */}
+            {/* <p className="mb-4">
+              I'm comfortable across the stack, from Java, Spring Boot, and
+              Redis to Next.js, React, and Tailwind CSS.
+            </p> */}
+            {/* <p className="mb-4">
+              Beyond the code, I love collaborating with teams, documenting
+              processes for smoother onboarding, and keeping quality high
+              without slowing down delivery. I take pride in being highly
+              responsible, and coding genuinely makes me happy. There's nothing
+              more satisfying than seeing a solution come to life and knowing it
+              works beautifully.
+            </p> */}
+            <p className="mb-4">Colleagues describe me as collaborative, responsible, and detail-oriented. I prioritize maintainable code and clear documentation to keep teams aligned. I’m a fast learner who adapts quickly to new challenges, communicates openly, and takes pride in delivering quality without slowing momentum.
+            </p>
+          </div>
           <div className="flex flex-row mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}

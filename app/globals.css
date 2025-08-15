@@ -39,11 +39,20 @@
   --color-secondary-700: var(--color-pink-700);
   --color-secondary-800: var(--color-pink-800);
   --color-secondary-900: var(--color-pink-900);
+
+  /* --color-text-dark: #121212;
+  --color-text-middle: #545252;
+  --color-text-light: #ADB7BE;
+  --color-text-extralight: #D3D3D3; */
+  --color-text-dark: #ADB7BE;
+  --color-text-middle: #ffffff;
+  --color-text-light: #D3D3D3;
+  --color-text-extralight: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #121212;
     --foreground: #ededed;
   }
 }
