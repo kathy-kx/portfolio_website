@@ -41,16 +41,29 @@ const HeroSection = () => {
 
           </p>
           <div>
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white">
+            {/* <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white"> */}
               {/* bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-black可改为bg-white hover:bg-slate-200 text-black*/}
-              Hire Me
-            </button>
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-text-extralight mt-3">
+              {/* Hire Me
+            </button> */}
+            {/* <button > */}
+              {/* bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-black可改为bg-white hover:bg-slate-200 text-black*/}
+              <a
+                href={process.env.NEXT_PUBLIC_EMAIL}
+                className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white inline-block text-center"
+              >
+                Hire Me
+              </a>
+            {/* </button> */}
+            <a 
+              href={process.env.NEXT_PUBLIC_CV_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-text-extralight mt-3 inline-block text-center">
               {/* bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500可以替换为bg-transparent */}
               <span className="block bg-black hover:bg-slate-800 rounded-full px-5 py-2">
                 Download CV
               </span>
-            </button>
+            </a>
           </div>
         </motion.div>
         {/* 右边占12格的5格 */}

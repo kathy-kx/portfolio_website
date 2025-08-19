@@ -11,7 +11,7 @@ const projectsData = [
     description:
       "A personal portfolio website built with React and Next.js to showcase my projects and skills.",
     imgUrl: "/images/projects/1.png",
-    tag: ["All", "Web Development", "React"],
+    tag: ["All", "Web", "React"],
     gitUrl: "https://github.com/kathy-kx/portfolio_website",
     previewUrl: "https://kathyzhu.com",
   },
@@ -20,7 +20,7 @@ const projectsData = [
     title: "Food Delivery App",
     description:
       "A food delivery application built with Java, SpringBoot, MySQL. It covers user ordering, restaurant management, and order processing.",
-    imgUrl: "/images/projects/1.png",
+    imgUrl: "/images/projects/2.png",
     tag: ["All", "Backend", "Java", "SpringBoot"],
     gitUrl: "https://github.com/kathy-kx/timing-food-delivery",
     previewUrl: "/",
@@ -30,10 +30,10 @@ const projectsData = [
     title: "Real Estate Platform",
     description:
       "A real estate platform built with Next.js, Node.js and MongoDB, featuring user authentication and property display.",
-    imgUrl: "/images/projects/1.png",
+    imgUrl: "/images/projects/default.png",
     tag: [
       "All",
-      "Web Development",
+      "Web",
       "Backend",
       "Node.js",
       "Next.js",
@@ -50,8 +50,8 @@ const projectsData = [
     title: "Feedback System",
     description:
       "A feedback system built with MERN, allowing users to submit and manage feedback.",
-    imgUrl: "/images/projects/1.png",
-    tag: ["All", "Web Development", "React", "Node.js", "Redux", "Full Stack"],
+    imgUrl: "/images/projects/default.png",
+    tag: ["All", "Web", "React", "Node.js", "Redux", "Full Stack"],
     gitUrl: "https://github.com/kathy-kx/feedback_system",
     previewUrl: "/",
   },
@@ -60,9 +60,10 @@ const projectsData = [
     title: "CO Detection",
     description:
       "A CO detection system built with C++ and Arduino, designed to monitor and detect carbon monoxide levels in residential areas.",
-    imgUrl: "/images/projects/1.png",
+    imgUrl: "/images/projects/5.png",
     tag: ["All", "C++", "Arduino", "IoT"],
-    gitUrl: "/",
+    gitUrl:
+      "https://www.tinkercad.com/things/jBcYAkMwLf1-arduino-based-carbon-monoxide-fire-alarm-system?sharecode=NoU8h0IMsN51NOtnq0qv0HPiAOC5lMd7N-hPaelQyP8",
     previewUrl: "/",
   },
 ];
@@ -85,7 +86,7 @@ const ProjectSection = () => {
   };
 
   return (
-    <section>
+    <section id="projects">
       <h2 className="text-center text-4xl font-bold text-text-middle mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
@@ -96,14 +97,19 @@ const ProjectSection = () => {
           isSelected={tag === "All"}
         />
         <ProjectTab
-          onClick={() => handleTagChange("Web Development")}
-          name="Web Development"
-          isSelected={tag === "Web Development"}
+          onClick={() => handleTagChange("Web")}
+          name="Web"
+          isSelected={tag === "Web"}
         />
         <ProjectTab
           onClick={() => handleTagChange("Backend")}
           name="Backend"
           isSelected={tag === "Backend"}
+        />
+        <ProjectTab
+          onClick={() => handleTagChange("Java")}
+          name="Java"
+          isSelected={tag === "Java"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">

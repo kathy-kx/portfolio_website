@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const EmailSection = () => {
-  const { emailSubmitted, setEmailSubmitted } = useState(false);
+  const [ emailSubmitted, setEmailSubmitted ] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
@@ -24,15 +24,30 @@ const EmailSection = () => {
       },
       body: JSONdata,
     };
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
-    if (resData.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
+    try{
+      const response = await fetch(endpoint, options);
+      const resData = await response.json();
+      // if (resData.status === 200) {
+      //   console.log("Message sent.");
+      //   setEmailSubmitted(true);
+      // }
+      if (response.ok) {
+        console.log("Message sent successfully!");
+        setEmailSubmitted(true);
+        // Clear the form
+        e.target.reset();
+      } else {
+        console.error("Failed to send message:", resData.error);
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
     }
   };
   return (
-    <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative">
+    <section
+      id="contact"
+      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+    >
       {/* <div 
             className="rounded-full h-96 w-96 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-y-1/2"
             style={{background: 'radial-gradient(circle, rgba(168, 85, 247, 0.8) 0%, rgba(168, 85, 247, 0) 70%)'}}
@@ -75,7 +90,7 @@ const EmailSection = () => {
               id="email"
               required
               placeholder="Enter your email"
-              className="bg-white border border-[#545252] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-3 focus:outline-none focus:ring-2 focus:ring-[#0070f3]"
+              className="bg-white border border-[#545252] placeholder-[#9CA2A9] text-gray-700 text-sm rounded-lg block w-full p-3 focus:outline-none focus:ring-2 focus:ring-[#0070f3]"
             />
           </div>
 
@@ -92,7 +107,7 @@ const EmailSection = () => {
               id="subject"
               required
               placeholder="Just saying hi"
-              className="bg-white border border-[#545252] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-3 focus:outline-none focus:ring-2 focus:ring-[#0070f3]"
+              className="bg-white border border-[#545252] placeholder-[#9CA2A9] text-gray-700 text-sm rounded-lg block w-full p-3 focus:outline-none focus:ring-2 focus:ring-[#0070f3]"
             />
           </div>
 
@@ -108,7 +123,7 @@ const EmailSection = () => {
               id="message"
               required
               rows={4}
-              className="bg-white border border-[#545252] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-3 focus:outline-none focus:ring-2 focus:ring-[#0070f3]"
+              className="bg-white border border-[#545252] placeholder-[#9CA2A9] text-gray-700 text-sm rounded-lg block w-full p-3 focus:outline-none focus:ring-2 focus:ring-[#0070f3]"
               placeholder="Let's talk about..."
             ></textarea>
           </div>
