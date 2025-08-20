@@ -19,6 +19,10 @@ const navLinks = [
     title: "Contact",
     path: "#contact",
   },
+  {
+    title: "Blog",
+    path: process.env.NEXT_PUBLIC_BLOG_URL,
+  },
 ];
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -27,13 +31,6 @@ const Navbar = () => {
     <nav className="fixed border-b border-gray-800 mx-auto top-0 left-0 right-0 z-20 bg-[#181818]/90">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-8 py-8">
         <Link href={"/"} className="text-2xl md:text-5xl font-semibold">
-          {/* If screen is large, show large logo; if small, show small logo */}
-          {/* <div className="hidden sm:block">
-            <Image src="/logo_large.png" alt="Logo" width={30} height={30} />
-          </div>
-          <div className="block sm:hidden">
-            <Image src="/logo_small.png" alt="Logo" width={30} height={30} />
-          </div> */}
           <div>
             <Image src="/logo_small.png" alt="Logo" width={30} height={30} />
           </div>
