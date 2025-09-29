@@ -15,7 +15,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-9 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-text-extralight mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold">
+          <h1 className="text-text-primary mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500">
               Hello, I'm{" "}
             </span>
@@ -35,7 +35,7 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-text-middle text-lg lg:text-xl mb-6">
+          <p className="text-text-secondary text-lg lg:text-xl mb-6">
             I turn constraints into elegant, working solutions.
             <br/>
 
@@ -58,9 +58,9 @@ const HeroSection = () => {
               href={process.env.NEXT_PUBLIC_CV_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-text-extralight mt-3 inline-block text-center">
+              className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-text-primary mt-3 inline-block text-center">
               {/* bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500可以替换为bg-transparent */}
-              <span className="block bg-black hover:bg-slate-800 rounded-full px-5 py-2">
+              <span className="block bg-background hover:bg-surface rounded-full px-5 py-2">
                 Download CV
               </span>
             </a>

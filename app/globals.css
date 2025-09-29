@@ -1,23 +1,49 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
+/* Dark theme as default */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #121212;
+  --foreground: #ededed;
+  --surface: #181818;
+  --surface-secondary: #1a1a1a;
+  --border: #333333;
+  --border-hover: #555555;
+
+  /* Text colors for dark theme */
+  --text-primary: #ffffff;
+  --text-secondary: #ADB7BE;
+  --text-tertiary: #D3D3D3;
+  --text-muted: #545252;
 }
 
-/* @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-} */
+/* Light theme */
+:root[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --surface: #f8f9fa;
+  --surface-secondary: #f1f3f4;
+  --border: #e5e7eb;
+  --border-hover: #d1d5db;
+
+  /* Text colors for light theme */
+  --text-primary: #171717;
+  --text-secondary: #4b5563;
+  --text-tertiary: #6b7280;
+  --text-muted: #9ca3af;
+}
+
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-secondary: var(--surface-secondary);
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* 定义 primary 和 secondary 的全套色阶 */
+  /* Primary and secondary color scales (colorful elements remain the same) */
   --color-primary-50: var(--color-purple-50);
   --color-primary-100: var(--color-purple-100);
   --color-primary-200: var(--color-purple-200);
@@ -40,25 +66,15 @@
   --color-secondary-800: var(--color-pink-800);
   --color-secondary-900: var(--color-pink-900);
 
-  /* --color-text-dark: #121212;
-  --color-text-middle: #545252;
-  --color-text-light: #ADB7BE;
-  --color-text-extralight: #D3D3D3; */
-  --color-text-dark: #ADB7BE;
-  --color-text-middle: #ffffff;
-  --color-text-light: #D3D3D3;
-  --color-text-extralight: #ffffff;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #121212;
-    --foreground: #ededed;
-  }
+  /* Theme-aware text colors */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-text-muted: var(--text-muted);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
