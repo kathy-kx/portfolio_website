@@ -30,7 +30,7 @@ const projectsData = [
     title: "Real Estate Platform",
     description:
       "A real estate platform built with Next.js, Node.js and MongoDB, featuring user authentication and property display.",
-    imgUrl: "/images/projects/default.png",
+    imgUrl: "public/images/projects/property-info.png",
     tag: [
       "All",
       "Web",
@@ -64,7 +64,8 @@ const projectsData = [
     tag: ["All", "C++", "Arduino", "IoT"],
     gitUrl:
       "https://www.tinkercad.com/things/jBcYAkMwLf1-arduino-based-carbon-monoxide-fire-alarm-system?sharecode=NoU8h0IMsN51NOtnq0qv0HPiAOC5lMd7N-hPaelQyP8",
-    previewUrl: "/",
+    previewUrl:
+      "https://www.tinkercad.com/things/jBcYAkMwLf1-arduino-based-carbon-monoxide-fire-alarm-system?sharecode=NoU8h0IMsN51NOtnq0qv0HPiAOC5lMd7N-hPaelQyP8",
   },
 ];
 
