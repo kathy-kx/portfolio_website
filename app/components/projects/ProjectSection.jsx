@@ -30,7 +30,7 @@ const projectsData = [
     title: "Real Estate Platform",
     description:
       "A real estate platform built with Next.js, Node.js and MongoDB, featuring user authentication and property display.",
-    imgUrl: "public/images/projects/property-info.png",
+    imgUrl: "/images/projects/property-info.png",
     tag: [
       "All",
       "Web",
