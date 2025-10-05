@@ -27,9 +27,9 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "Real Estate Platform",
+    title: "Real Estate Demo",
     description:
-      "A real estate platform built with Next.js, Node.js and MongoDB, featuring user authentication and property display.",
+      "A real estate demo built with Next.js, Node.js and MongoDB, featuring user authentication and property display.",
     imgUrl: "/images/projects/property-info.png",
     tag: [
       "All",
