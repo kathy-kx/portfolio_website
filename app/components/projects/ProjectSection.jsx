@@ -29,7 +29,7 @@ const projectsData = [
     id: 3,
     title: "Real Estate Demo",
     description:
-      "A real estate demo built with Next.js, Node.js and MongoDB, featuring user authentication and property display.",
+      "A real estate demo built with Next.js, Node.js and MongoDB, featuring property display.",
     imgUrl: "/images/projects/property-info.png",
     tag: [
       "All",
@@ -42,8 +42,8 @@ const projectsData = [
       "Authentication",
       "API Integration",
     ],
-    gitUrl: "https://github.com/kathy-kx/real-estate-demo",
-    previewUrl: "/",
+    gitUrl: "/", // private repository: "https://github.com/kathy-kx/real-estate-demo"
+    previewUrl: "https://realestate.kathyzhu.com",
   },
   {
     id: 4,
