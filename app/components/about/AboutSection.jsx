@@ -11,14 +11,12 @@ const TAB_DATA = [
       <ul className="list-disc pl-2">
         <li>Java</li>
         <li>Spring Boot</li>
+        <li>Spring Cloud</li>
         <li>Node.js</li>
-        <li>Next.js</li>
         <li>JavaScript</li>
         <li>React</li>
-        <li>Express</li>
-        <li>MySQL & MongoDB</li>
-        <li>Git</li>
-        <li>Linux</li>
+        <li>SQL & NoSQL</li>
+        <li>AWS & GCP</li>
         ...
       </ul>
     ),
@@ -39,15 +37,15 @@ const TAB_DATA = [
       </ul>
     ),
   },
-  // {
-  //     title: "Certifications",
-  //     id: "certifications",
-  //     content: (
-  //         <ul className='list-disc pl-2'>
-  //             <li>AWS Cloud Practitioner</li>
-  //         </ul>
-  //     ),
-  // }
+  {
+    title: "Certifications",
+    id: "certifications",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>Google Cloud Associate Cloud Engineer</li>
+      </ul>
+    ),
+  },
 ];
 
 const AboutSection = () => {
@@ -61,7 +59,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section id='about' className="text-text-middle">
+    <section id="about" className="text-text-middle">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image
           src="/images/about-image.png"
@@ -73,20 +71,19 @@ const AboutSection = () => {
           <h2 className="text-4xl font-bold text-text-middle mb-4">About Me</h2>
           <div className="text-base lg:text-lg">
             <p className="mb-4">
-              Hi, I'm Kathy Kexin Zhu, a software engineer and full-stack
-              developer.
+              Hi, I'm Kathy Kexin Zhu, a full-stack and backend engineer with
+              1.5+ years of internship experience building production systems in
+              Node.js and Spring Boot.
             </p>
             <p className="mb-4">
               I'm graduating in April 2026 with a Master's in Electrical &
-              Computer Engineering (GPA 3.95/4.0) from the University of Ottawa.
-              and I'm open to full-time opportunities as well
-              as part-time internships.
+              Computer Engineering (4.0 GPA) from University of Ottawa. I'm open
+              to full-time SDE/Backend/FUll-stack opportunities.
             </p>
             <p className="mb-4">
-              I build end-to-end products that are fast and reliable: 
-              shaping REST APIs and data flows, integrating AI-powered features, 
-              and polishing frontend performance so experiences are fast and reliable. 
-              My core stack includes Java, Spring Boot, Redis, MongoDB, MySQL, Next.js, React, and Tailwind CSS.
+              I build systems that are fast and reliable: designing REST APIs
+              and data flows, integrating AI-powered features, and improving
+              frontend performance.
             </p>
             {/* <p className="mb-4">
               I thrive on solving problems end to end, whether it's building
@@ -105,7 +102,12 @@ const AboutSection = () => {
               more satisfying than seeing a solution come to life and knowing it
               works beautifully.
             </p> */}
-            <p className="mb-4">Colleagues describe me as collaborative, responsible, and detail-oriented. I prioritize maintainable code and clear documentation to keep teams aligned. I’m a fast learner who adapts quickly to new challenges, communicates openly, and takes pride in delivering quality without slowing momentum.
+            <p className="mb-4">
+              Colleagues describe me as collaborative, responsible, and
+              dedicated. I prioritize maintainable code and clear documentation
+              to keep teams aligned. I'm a fast learner who adapts quickly to
+              new challenges, communicates openly, and takes pride in delivering
+              quality without slowing momentum.
             </p>
           </div>
           <div className="flex flex-row mt-8">
@@ -123,13 +125,13 @@ const AboutSection = () => {
               {" "}
               Education{" "}
             </TabButton>
-            {/* <TabButton
+            <TabButton
               selectTab={() => handleTabChange("certifications")}
               active={tab === "certifications"}
             >
               {" "}
               Certifications{" "}
-            </TabButton> */}
+            </TabButton>
           </div>
           <div className="mt-8">
             {TAB_DATA.find((t) => t.id === tab).content}
