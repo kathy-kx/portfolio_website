@@ -111,10 +111,10 @@ const ProjectSection = () => {
 
   return (
     <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-text-middle mt-4 mb-8 md:mb-2">
+      <h2 className="text-center text-4xl font-bold text-text-primary mt-4 mb-8 md:mb-2">
         My Projects
       </h2>
-      <div className="text-text-middle flex flex-row justify-center items-center gap-2 py-8">
+      <div className="text-text-primary flex flex-row justify-center items-center gap-2 py-8">
         <ProjectTab
           onClick={() => handleTagChange("All")}
           name="All"

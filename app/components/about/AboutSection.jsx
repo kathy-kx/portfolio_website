@@ -59,7 +59,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="text-text-middle">
+    <section id="about" className="text-text-primary">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image
           src="/images/about-image.png"
@@ -68,7 +68,9 @@ const AboutSection = () => {
           alt="About Image"
         />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-text-middle mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold text-text-primary mb-4">
+            About Me
+          </h2>
           <div className="text-base lg:text-lg">
             <p className="mb-4">
               Hi, I'm Kathy Kexin Zhu, a full-stack and backend engineer with
@@ -78,7 +80,7 @@ const AboutSection = () => {
             <p className="mb-4">
               I'm graduating in April 2026 with a Master's in Electrical &
               Computer Engineering (4.0 GPA) from University of Ottawa. I'm open
-              to full-time SDE/Backend/FUll-stack opportunities.
+              to full-time SDE/Backend/Full-stack opportunities.
             </p>
             <p className="mb-4">
               I build systems that are fast and reliable: designing REST APIs
